@@ -9,17 +9,17 @@ resources:
       tasks:
         - task_key: load_devices
           notebook_task:
-            notebook_path: auto-loader/devices_auto_loader
+            notebook_path: iot-telemetry-project/iot-telemetry/auto-loader/devices_auto_loader
             source: GIT
           environment_key: Default
         - task_key: load_products
           notebook_task:
-            notebook_path: auto-loader/products_auto_loader
+            notebook_path: iot-telemetry-project/iot-telemetryauto-loader/products_auto_loader
             source: GIT
           environment_key: Default
         - task_key: load_jobs
           notebook_task:
-            notebook_path: auto-loader/telemetry_jobs
+            notebook_path: iot-telemetry-project/iot-telemetryauto-loader/telemetry_jobs
             source: GIT
           environment_key: Default
       git_source:
