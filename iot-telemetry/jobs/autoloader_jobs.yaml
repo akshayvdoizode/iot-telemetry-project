@@ -1,0 +1,35 @@
+resources:
+  jobs:
+    auto_loader_job:
+      name: auto_loader_job
+      schedule:
+        quartz_cron_expression: 47 25 19 * * ?
+        timezone_id: Asia/Calcutta
+        pause_status: UNPAUSED
+      tasks:
+        - task_key: load_devices
+          notebook_task:
+            notebook_path: auto-loader/devices_auto_loader
+            source: GIT
+          environment_key: Default
+        - task_key: load_products
+          notebook_task:
+            notebook_path: auto-loader/products_auto_loader
+            source: GIT
+          environment_key: Default
+        - task_key: load_jobs
+          notebook_task:
+            notebook_path: auto-loader/telemetry_jobs
+            source: GIT
+          environment_key: Default
+      git_source:
+        git_url: https://github.com/akshayvdoizode/iot-telemetry-project.git
+        git_provider: gitHub
+        git_branch: main
+      queue:
+        enabled: true
+      environments:
+        - environment_key: Default
+          spec:
+            environment_version: "5"
+      performance_target: PERFORMANCE_OPTIMIZED
