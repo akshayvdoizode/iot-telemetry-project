@@ -3,7 +3,7 @@ bundle:
   name: "iot-telemetry"
 
 include:
-  - jobs/*.yml
+  - jobs/*.yaml
 
 targets:
   # The 'dev' target, for development purposes. This target is the default.
