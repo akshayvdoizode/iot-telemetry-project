@@ -1,3 +1,4 @@
+drop table if exists iot_telemetry.silver.dim_device_history ;
 CREATE TABLE IF NOT EXISTS iot_telemetry.silver.dim_device_history (
     device_sk BIGINT,
     device_id STRING,
@@ -19,3 +20,4 @@ CREATE TABLE IF NOT EXISTS iot_telemetry.silver.dim_device_history (
     is_current BOOLEAN
 )
 USING DELTA;
+
