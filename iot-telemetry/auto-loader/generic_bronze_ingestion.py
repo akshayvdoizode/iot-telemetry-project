@@ -8,13 +8,13 @@
 # COMMAND ----------
 
 folders = get_folders(
-    rootPath,
+    rootDataPath,
     EXCLUDED_SOURCES
 )
 
 process_folders(
     folders,
-    rootPath
+    rootDataPath
 )
 
 # COMMAND ----------

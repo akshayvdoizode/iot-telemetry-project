@@ -1,6 +1,6 @@
 drop table if exists iot_telemetry.silver.dim_device_history ;
 CREATE TABLE IF NOT EXISTS iot_telemetry.silver.dim_device_history (
-    device_sk BIGINT,
+    device_sk BIGINT GENERATED ALWAYS as IDENTITY,
     device_id STRING,
     serial_number STRING,
     product_number STRING,
